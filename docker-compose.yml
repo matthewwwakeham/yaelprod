@@ -3,7 +3,7 @@ services:
         container_name: goapp
         build:
             context: ./app
-            dockerfile: dockerfile
+            dockerfile: Dockerfile
         ports:
         - 8080:8000
 
