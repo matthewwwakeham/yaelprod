@@ -29,5 +29,5 @@ COPY index.html /app/index.html
 # Command to run the executable
 ENTRYPOINT ["/app/main"]
 
-# Expose port 8080 to the outside world
-EXPOSE 8080
+# Expose port 8000 to the outside world
+EXPOSE 8000
