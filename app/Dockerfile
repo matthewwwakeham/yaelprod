@@ -6,7 +6,7 @@ FROM golang:1.20 AS builder
 WORKDIR /app
 
 # Copy the Go Modules manifests
-COPY go.mod go.sum ./
+COPY go.mod ./
 
 # Download dependencies. Dependencies will be cached if the go.mod and go.sum files are unchanged
 RUN go mod download
