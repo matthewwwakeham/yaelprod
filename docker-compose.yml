@@ -2,7 +2,7 @@ services:
     goapp:
         container_name: goapp
         build:
-            context: ./yael/app
+            context: ./app
             dockerfile: dockerfile
         ports:
         - 8080:8000
