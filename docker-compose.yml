@@ -7,7 +7,7 @@ services:
         ports:
         - 8080:8000
         environment:
-            DB_Host: db
+            DB_HOST: db
             DB_PORT: 3306
             DB_USER: ${DB_USER}
             DB_PASSWORD: ${DB_PASSWORD}
@@ -41,9 +41,6 @@ services:
         ports:
             - "3306:3306"
 
-volumes:
-    db_data:
-
     certbot:
         image: certbot/certbot
         container_name: certbot
@@ -51,3 +48,6 @@ volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
         command: certonly --webroot -w /var/www/certbot --keep-until-expiring --email mwakeham95@gmail.com -d yuval.store -d www.yuval.store --agree-tos
+
+volumes:
+    db_data:
