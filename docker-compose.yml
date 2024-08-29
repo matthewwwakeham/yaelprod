@@ -41,6 +41,9 @@ services:
         ports:
             - "3306:3306"
 
+    volumes:
+        db_data:
+
     certbot:
         image: certbot/certbot
         container_name: certbot
